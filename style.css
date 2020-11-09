@@ -1,0 +1,149 @@
+body {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header"
+    "nav main aside"
+    "footer footer footer";
+    grid-gap: .9em;
+    /* background-image: url("zebra.jpg"); */
+    /* background-size: 100%; */
+}
+
+header {
+    /* background-color: blue; */
+    color: black;
+    padding: 20px;
+    grid-area: header;
+    text-align: center;
+}
+.off {
+    display: none;
+    color: black;
+    text-decoration: none;
+}
+
+
+ul {
+    list-style-type: none;
+}
+li {
+    margin-top: 1em;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+main {
+    /* background-color: darkblue; */
+    color: black;
+    grid-area: main;
+}
+
+p {
+    margin: 0;
+    padding: 1em;
+}
+
+aside {
+    /* background-color: lightgreen; */
+    grid-area: aside;
+}
+
+footer {
+    /* background-color: darkgreen; */
+    color: black;
+    grid-area: footer;
+    text-align: center;
+    padding-top: 2em;
+}
+
+@media screen and (max-width:500px){
+
+    
+    nav:target {
+        background-color: black;
+        grid-area: nav;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100vh;
+        text-align: center;
+    }
+
+body {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header"
+    "main aside"
+    "footer footer";
+    grid-gap: .3em;
+}
+
+header {
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+}
+
+h1 {
+    margin: .3em;
+}
+
+/* nav {
+    text-align: center;
+    grid-area: nav;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+} */
+
+.hamburger {
+    height: .8em;
+    width: 1.25em;
+    display: block;
+    border-top: .2em solid black;
+    border-bottom: .2em solid black;
+    border-radius: .1em;
+    position: relative;
+}
+
+.hamburger:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: .3em;
+    left: 0px;
+    border-top: .2em solid black;
+}
+nav ul li {
+    margin-top: 5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.off {
+    display: block;
+    margin: .3em;
+    font-size: 2.5em;
+    padding-bottom: .2em;
+}
+
+#clicked .on {display: block;}
+#clicked .off {display: none;}
+#clicked:target .on {display: none;}
+#clicked:target .off {display: block;}
+/* FIX ME */
+
+}
