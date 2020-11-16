@@ -15,8 +15,11 @@ header {
     color: black;
     padding: 20px;
     grid-area: header;
-    text-align: center;
+    text-align: center;  
 }
+
+
+
 .off {
     display: none;
     color: black;
@@ -63,7 +66,7 @@ footer {
 @media screen and (max-width:500px){
 
     
-    nav:target {
+    body:target nav {
         background-color: black;
         grid-area: nav;
         display: block;
@@ -73,6 +76,7 @@ footer {
         width: 50%;
         height: 100vh;
         text-align: center;
+        
     }
 
 body {
@@ -88,8 +92,10 @@ body {
 header {
     display: inline-flex;
     align-items: center;
-    text-align: left;
+    text-align: left;  
 }
+
+
 
 h1 {
     margin: .3em;
@@ -140,10 +146,11 @@ nav ul li a {
     padding-bottom: .2em;
 }
 
-#clicked .on {display: block;}
+#clicked .hamburger {display: block;}
 #clicked .off {display: none;}
-#clicked:target .on {display: none;}
+#clicked:target .hamburger {display: none;}
 #clicked:target .off {display: block;}
+
 /* FIX ME */
 
 }
